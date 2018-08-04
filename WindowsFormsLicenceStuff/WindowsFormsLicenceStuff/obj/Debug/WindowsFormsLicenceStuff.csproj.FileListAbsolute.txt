@@ -8,3 +8,6 @@ D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\
 D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.csproj.CoreCompileInputs.cache
 D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.exe
 D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.pdb
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.Form2.resources
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.Form3.resources
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.Form4.resources
