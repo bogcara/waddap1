@@ -1,0 +1,13 @@
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\bin\Debug\WindowsFormsLicenceStuff.exe.config
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\bin\Debug\WindowsFormsLicenceStuff.exe
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\bin\Debug\WindowsFormsLicenceStuff.pdb
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.csprojAssemblyReference.cache
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.Form1.resources
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.Properties.Resources.resources
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.csproj.GenerateResource.cache
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.csproj.CoreCompileInputs.cache
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.exe
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.pdb
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.Form2.resources
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.Form3.resources
+D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\WindowsFormsLicenceStuff\obj\Debug\WindowsFormsLicenceStuff.Form4.resources

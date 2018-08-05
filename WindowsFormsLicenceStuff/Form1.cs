@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,10 +14,15 @@ namespace WindowsFormsLicenceStuff
 {
     public partial class Form1 : Form
     {
+        String conString = "Data Source=EN614211;Initial Catalog=LicenceDB;Integrated Security=True";
+        Bitmap image = new Bitmap(@"C:\Users\bcaramihai\Desktop\asdasdasd.jpg");
+        List<Bitmap> images = new List<Bitmap>();
+
+
         public Form1()
         {
             InitializeComponent();
-            pictureBox1.Image = new Bitmap(@"D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\images\600px-No_image_available.svg.png");
+            pictureBox1.Image = new Bitmap(@"D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\images\no.png");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -64,15 +71,56 @@ namespace WindowsFormsLicenceStuff
         private void button1_Click(object sender, EventArgs e)
         {
             if (pictureBox1.Image != null)
-            {
-                Bitmap image = new Bitmap(@"D:\C#\bcaramihai\source\repos\WindowsFormsLicenceStuff\images\asdasdasd.jpg");
+            { 
+                SqlConnection con = new SqlConnection(conString);
+                con.Open();
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    String userQuery = "SELECT [ImageName] FROM [LicenceDB].[dbo].[TestImages]";
+                    SqlCommand userC = new SqlCommand(userQuery, con);
+
+                    using (SqlDataReader objReader = userC.ExecuteReader())
+                    {
+                        int i = 0;
+                        if (objReader.HasRows)
+                        {
+                            while (objReader.Read())
+                            {
+                                if (!objReader.IsDBNull(0))
+                                {
+                                    byte[] photo = (byte[])objReader[0];
+                                    MemoryStream ms = new MemoryStream(photo);
+                                    Bitmap bm = new Bitmap(ms);
+                                    images.Add(bm);
+
+                                    ms.Close();
+                                    i++;
+                                }
+                            }
+                        }
+                    }
+                }
 
                 List<bool> firstHash = GetHash(new Bitmap(pictureBox1.Image));
-                List<bool> secondHash = GetHash(image);
+                int bestHash = 0;
+                
+                for (int x = 0; x < images.Count(); x++) {
+                    Bitmap verifyImage = images[x];
+                    List<bool> testHash = GetHash(verifyImage);
+
+                    int verifyEqualElements = firstHash.Zip(testHash, (i, j) => i == j).Count(eq => eq);
+                    int verifyEqualPercentage = (verifyEqualElements * 100) / 16384;
+                    if (verifyEqualPercentage >= bestHash) {
+                        bestHash = verifyEqualPercentage;
+                        image = images[x];
+                    }
+                }
+
+                /*List<bool> secondHash = GetHash(image);
 
                 int equalElements = firstHash.Zip(secondHash, (i, j) => i == j).Count(eq => eq);
-                int equalPercentage = (equalElements * 100) / 16384;
-                String textResult = equalElements.ToString() + " pixels (" + equalPercentage.ToString() + "%)";
+                int equalPercentage = (equalElements * 100) / 16384;*/
+                String textResult = /*equalElements.ToString() + " pixels (" +*/ bestHash.ToString() + "% similarity";
 
                 Bitmap imgResult = new Bitmap(image, new Size(128, 128));
 
